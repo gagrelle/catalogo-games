@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fase Bônus: catálogo de games com filtro por gênero</title>
+    <meta
+      name="description"
+      content="Catálogo com nove games de gêneros variados. Filtre por nome, gênero, plataforma e nota e leia uma descrição curta de cada jogo."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Fase Bônus: catálogo de games" />
+    <meta
+      property="og:description"
+      content="Filtre jogos por nome, gênero, plataforma e nota."
+    />
+    <link rel="icon" type="image/svg+xml" href="img/icone.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topo">
+      <div class="topo-conteudo">
+        <a class="logo" href="#inicio">
+          <img
+            class="logo-icone"
+            src="img/icone.svg"
+            alt=""
+            width="32"
+            height="32"
+          />Fase Bônus</a
+        >
+        <nav aria-label="Menu principal">
+          <ul class="menu">
+            <li>
+              <a href="#inicio">
+                <svg
+                  class="menu-icone"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 20h16v2H4zm16-10h2v10h-2zM2 10h2v10H2zm2-2h2v2H4zm2-2h2v2H6zm2-2h2v2H8zm2-2h4v2h-4zm4 2h2v2h-2zm2 2h2v2h-2zm2 2h2v2h-2zM8 14h2v6H8zm2-2h4v2h-4zm4 2h2v6h-2z"
+                  />
+                </svg>
+                <span>Início</span>
+              </a>
+            </li>
+            <li>
+              <a href="#filtros">
+                <svg
+                  class="menu-icone"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8 14H7v6H5v-6H2v-2h6v2Zm5 6h-2V10h2v10Zm9-2h-3v2h-2v-2h-1v-2h6v2Zm-3-4h-2V4h2v10ZM7 10H5V4h2v6Zm6-4h2v2H9V6h2V4h2v2Z"
+                  />
+                </svg>
+                <span>Filtros</span>
+              </a>
+            </li>
+            <li>
+              <a href="#catalogo">
+                <svg
+                  class="menu-icone"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M19 4h2v5h-2V4Zm0 5v2h-2V9h2ZM5 4h2v5H5V4Zm0 5H3v2h2V9Zm12 2V4H7v7c0 2.76 2.24 5 5 5s5-2.24 5-5Zm-4 5.92V18h3v2H8v-2h3v-1.08A7.002 7.002 0 0 1 5 11V2h14v9a7.002 7.002 0 0 1-6 5.92Z"
+                  />
+                </svg>
+                <span>Catálogo</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contato">
+                <svg
+                  class="menu-icone"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 8h2v2H6zm2 2h2v2H8zm10-2h-2v2h2zm-2 2h-2v2h2zm-6 2h4v2h-4zM2 6h2v12H2zm18 0h2v12h-2zM4 4h16v2H4zm0 14h16v2H4z"
+                  />
+                </svg>
+                <span>Contato</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="inicio">
+        <h1>Catálogo de games para achar seu próximo jogo</h1>
+        <p>
+          Aqui estão nove jogos de gêneros diferentes. Use os filtros para
+          procurar por nome, gênero, plataforma ou nota.
+        </p>
+        <ul>
+          <li>Busca pelo nome do jogo</li>
+          <li>Filtros de gênero, plataforma e nota mínima</li>
+          <li>Descrição curta de cada título</li>
+        </ul>
+        <a class="botao" href="#filtros">Ir para os filtros</a>
+      </section>
+
+      <section id="filtros">
+        <h2>Filtrar jogos</h2>
+        <form id="form-filtros">
+          <div class="campo">
+            <label for="busca">Nome do jogo</label>
+            <input
+              type="search"
+              id="busca"
+              name="busca"
+              placeholder="Ex.: Celeste"
+            />
+          </div>
+          <div class="campo">
+            <label for="genero">Gênero</label>
+            <select id="genero" name="genero">
+              <option value="">Todos</option>
+              <option value="Ação e aventura">Ação e aventura</option>
+              <option value="Estratégia">Estratégia</option>
+              <option value="Metroidvania">Metroidvania</option>
+              <option value="Plataforma">Plataforma</option>
+              <option value="RPG de ação">RPG de ação</option>
+              <option value="RPG de turnos">RPG de turnos</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="plataforma">Plataforma</label>
+            <select id="plataforma" name="plataforma">
+              <option value="">Todas</option>
+              <option value="pc">PC</option>
+              <option value="playstation">PlayStation</option>
+              <option value="xbox">Xbox</option>
+              <option value="nintendo">Nintendo</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="nota">Avaliação mínima (Steam)</label>
+            <select id="nota" name="nota">
+              <option value="0">Qualquer</option>
+              <option value="9">9,0 ou mais (90%+)</option>
+              <option value="9.5">9,5 ou mais (95%+)</option>
+            </select>
+          </div>
+          <button type="reset" class="botao">Limpar filtros</button>
+        </form>
+        <p id="contador" role="status">Mostrando 9 de 9 jogos</p>
+      </section>
+
+      <section id="catalogo">
+        <h2>Catálogo</h2>
+        <div class="cards">
+          <article
+            class="card"
+            data-nome="Age of Empires IV"
+            data-genero="Estratégia"
+            data-plataformas="pc playstation xbox"
+            data-nota="8.6"
+          >
+            <img
+              src="img/aoe4.jpg"
+              alt="Capa de Age of Empires IV: Anniversary Edition, com guerreiros medievais de várias civilizações em tons de azul e dourado"
+              width="460"
+              height="215"
+              loading="lazy"
+            />
+            <div class="card-corpo">
+              <h3>Age of Empires IV</h3>
+              <p class="meta">Estratégia, lançado em 2021</p>
+              <p>
+                Estratégia em tempo real com batalhas históricas da Idade Média:
+                construa cidades, forme exércitos e leve sua civilização à
+                vitória.
+              </p>
+              <p class="meta">Plataformas: PC, PlayStation, Xbox</p>
+              <p class="nota">
+                Avaliação na Steam: <strong>8,6</strong> (86% positiva)
+              </p>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-nome="Baldur's Gate 3"
+            data-genero="RPG de turnos"
+            data-plataformas="pc playstation xbox"
+            data-nota="9.6"
+          >
+            <img
+              src="img/baldursgate3.jpg"
+              alt="Capa de Baldur's Gate 3, com um grupo de aventureiros diante de uma criatura sombria, em tons de azul e laranja"
+              width="460"
+              height="215"
+              loading="lazy"
+            />
+            <div class="card-corpo">
+              <h3>Baldur's Gate 3</h3>
+              <p class="meta">RPG de turnos, lançado em 2023</p>
+              <p>
+                RPG de turnos baseado em Dungeons &amp; Dragons, com grupo de
+                aventureiros, combate tático e escolhas que mudam a história.
+              </p>
+              <p class="meta">Plataformas: PC, PlayStation, Xbox</p>
+              <p class="nota">
+                Avaliação na Steam: <strong>9,6</strong> (96% positiva)
+              </p>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-nome="Celeste"
+            data-genero="Plataforma"
+            data-plataformas="pc playstation xbox nintendo"
+            data-nota="9.7"
+          >
+            <img
+              src="img/celeste.jpg"
+              alt="Capa de Celeste, com uma montanha, um morango com asas e duas personagens de cabelo vermelho"
+              width="460"
+              height="215"
+              loading="lazy"
+            />
+            <div class="card-corpo">
+              <h3>Celeste</h3>
+              <p class="meta">Plataforma, lançado em 2018</p>
+              <p>
+                Plataforma sobre escalar uma montanha, com fases difíceis e uma
+                história sobre superação.
+              </p>
+              <p class="meta">Plataformas: PC, PlayStation, Xbox, Nintendo</p>
+              <p class="nota">
+                Avaliação na Steam: <strong>9,7</strong> (97% positiva)
+              </p>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-nome="Cyberpunk 2077"
+            data-genero="RPG de ação"
+            data-plataformas="pc playstation xbox"
+            data-nota="8.6"
+          >
+            <img
+              src="img/cyberpunk.jpg"
+              alt="Capa de Cyberpunk 2077, com uma pessoa de costas, de jaqueta e cabelo colorido, sobre um fundo amarelo"
+              width="460"
+              height="215"
+              loading="lazy"
+            />
+            <div class="card-corpo">
+              <h3>Cyberpunk 2077</h3>
+              <p class="meta">RPG de ação, lançado em 2020</p>
+              <p>
+                RPG de ação em primeira pessoa na cidade futurista de Night
+                City, onde você vive V e decide como agir nas missões.
+              </p>
+              <p class="meta">Plataformas: PC, PlayStation, Xbox</p>
+              <p class="nota">
+                Avaliação na Steam: <strong>8,6</strong> (86% positiva)
+              </p>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-nome="Elden Ring"
+            data-genero="RPG de ação"
+            data-plataformas="pc playstation xbox"
+            data-nota="9.3"
+          >
+            <img
+              src="img/eldenring.jpg"
+              alt="Capa de Elden Ring, com o logotipo dourado e um grande anel de luz sobre uma paisagem escura"
+              width="460"
+              height="215"
+              loading="lazy"
+            />
+            <div class="card-corpo">
+              <h3>Elden Ring</h3>
+              <p class="meta">RPG de ação, lançado em 2022</p>
+              <p>
+                RPG de ação em mundo aberto da FromSoftware, conhecido pela
+                dificuldade e pela exploração livre.
+              </p>
+              <p class="meta">Plataformas: PC, PlayStation, Xbox</p>
+              <p class="nota">
+                Avaliação na Steam: <strong>9,3</strong> (93% positiva)
+              </p>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-nome="God of War"
+            data-genero="Ação e aventura"
+            data-plataformas="pc playstation"
+            data-nota="9.6"
+          >
+            <img
+              src="img/godofwar.jpg"
+              alt="Capa de God of War, com o logotipo de letras de pedra e uma paisagem de montanhas e lago ao fundo"
+              width="460"
+              height="215"
+              loading="lazy"
+            />
+            <div class="card-corpo">
+              <h3>God of War</h3>
+              <p class="meta">Ação e aventura, lançado em 2018</p>
+              <p>
+                Ação e aventura em que Kratos e o filho Atreus atravessam o
+                mundo da mitologia nórdica, com combate corpo a corpo.
+              </p>
+              <p class="meta">Plataformas: PC, PlayStation</p>
+              <p class="nota">
+                Avaliação na Steam: <strong>9,6</strong> (96% positiva)
+              </p>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-nome="Hollow Knight"
+            data-genero="Metroidvania"
+            data-plataformas="pc playstation xbox nintendo"
+            data-nota="9.7"
+          >
+            <img
+              src="img/hollowknight.jpg"
+              alt="Capa de Hollow Knight, com um pequeno cavaleiro de máscara branca e capa azul empunhando uma lâmina fina"
+              width="460"
+              height="215"
+              loading="lazy"
+            />
+            <div class="card-corpo">
+              <h3>Hollow Knight</h3>
+              <p class="meta">Metroidvania, lançado em 2017</p>
+              <p>
+                Exploração em 2D por um reino subterrâneo cheio de insetos,
+                segredos e chefes difíceis.
+              </p>
+              <p class="meta">Plataformas: PC, PlayStation, Xbox, Nintendo</p>
+              <p class="nota">
+                Avaliação na Steam: <strong>9,7</strong> (97% positiva)
+              </p>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-nome="Red Dead Redemption 2"
+            data-genero="Ação e aventura"
+            data-plataformas="pc playstation xbox"
+            data-nota="9.2"
+          >
+            <img
+              src="img/rdr2.jpg"
+              alt="Capa de Red Dead Redemption 2, com um homem de chapéu apontando um revólver e cavaleiros em silhueta, em tons de vermelho"
+              width="460"
+              height="215"
+              loading="lazy"
+            />
+            <div class="card-corpo">
+              <h3>Red Dead Redemption 2</h3>
+              <p class="meta">Ação e aventura, lançado em 2018</p>
+              <p>
+                Ação e aventura em mundo aberto no Velho Oeste, em que você
+                acompanha Arthur Morgan e sua gangue em fuga.
+              </p>
+              <p class="meta">Plataformas: PC, PlayStation, Xbox</p>
+              <p class="nota">
+                Avaliação na Steam: <strong>9,2</strong> (92% positiva)
+              </p>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-nome="The Witcher 3: Wild Hunt"
+            data-genero="RPG de ação"
+            data-plataformas="pc playstation xbox nintendo"
+            data-nota="9.7"
+          >
+            <img
+              src="img/witcher3.jpg"
+              alt="Capa de The Witcher 3: Wild Hunt, com um homem de cabelo branco e espada diante de montanhas nevadas"
+              width="460"
+              height="215"
+              loading="lazy"
+            />
+            <div class="card-corpo">
+              <h3>The Witcher 3: Wild Hunt</h3>
+              <p class="meta">RPG de ação, lançado em 2015</p>
+              <p>
+                RPG de ação em mundo aberto no papel de Geralt, um caçador de
+                monstros, com missões e escolhas que mudam o rumo da história.
+              </p>
+              <p class="meta">Plataformas: PC, PlayStation, Xbox, Nintendo</p>
+              <p class="nota">
+                Avaliação na Steam: <strong>9,7</strong> (97% positiva)
+              </p>
+            </div>
+          </article>
+        </div>
+        <p id="vazio" hidden>
+          Nenhum jogo encontrado com esses filtros. Clique em "Limpar filtros"
+          para ver todos.
+        </p>
+      </section>
+
+      <section id="contato">
+        <h2>Fale com a gente</h2>
+        <p>Sugestão de jogo para o catálogo? Mande uma mensagem.</p>
+        <form id="form-contato" action="#" method="post">
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="botao">Enviar mensagem</button>
+        </form>
+        <p id="resposta" role="status"></p>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>© 2026 Fase Bônus.</p>
+      <p><a href="#inicio">Voltar ao topo</a></p>
+    </footer>
+  </body>
+</html>
