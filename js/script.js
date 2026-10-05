@@ -125,7 +125,7 @@ function filtrarJogos() {
     }
   }
 
-  // Saída no console
+  // Contador visual
   totalJogos = visiveis;
   filtroAtivo = visiveis < cards.length;
   contador.textContent =
