@@ -133,6 +133,7 @@ function filtrarJogos() {
   avisoVazio.hidden = visiveis > 0;
 }
 
+// Ações do usuário
 formFiltros.addEventListener("input", filtrarJogos);
 formFiltros.addEventListener("reset", function () {
   setTimeout(filtrarJogos, 0);
