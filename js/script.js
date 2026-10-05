@@ -131,12 +131,6 @@ function filtrarJogos() {
   contador.textContent =
     "Mostrando " + visiveis + " de " + cards.length + " jogos";
   avisoVazio.hidden = visiveis > 0;
-  console.log(
-    "Filtro aplicado. Jogos visíveis:",
-    totalJogos,
-    "| Filtro ativo:",
-    filtroAtivo,
-  );
 }
 
 formFiltros.addEventListener("input", filtrarJogos);
